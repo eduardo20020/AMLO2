@@ -1,6 +1,3 @@
-@php
-    $rol = Auth::user();
-@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,25 +17,11 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
 
-
-            @if($rol->rol=='pasante')
-                @include('layouts.barraPasante')
-            @else
-                @include('layouts.barraEmpresa')
-            @endif
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            @include('components.barraDeNavegacion')
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('main')
             </main>
         </div>
     </body>
