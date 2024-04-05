@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Aqui puedes crear tus ofertas!') }}, {{  Auth::user()->name; }}
+            {{ __('Aqui puedes crear tus ofertas!') }}
         </h2>
     </x-slot>
 

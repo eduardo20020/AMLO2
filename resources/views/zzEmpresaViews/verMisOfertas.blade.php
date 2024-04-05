@@ -1,8 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Ver Mis Ofertas') }}
-            rol: {{  Auth::user()->rol; }}
+            {{ __('Aqui puedes ver las ofertas que has creado') }}
         </h2>
     </x-slot>
 
