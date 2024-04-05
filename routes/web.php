@@ -44,7 +44,7 @@ Route::get('/dashboardEmpresa/verMisOfertas', function () {
 })->middleware(['auth', 'verified'])->name('verMisOfertas');
 
 Route::get('/dashboardEmpresa/miPerfil', function () {
-    return view('zzEmpresaViews.miPerfil',['rol'=>Auth::user()->rol]);
+    return view('zzEmpresaViews.miPerfil',['usuario'=>Auth::user()]);
 })->middleware(['auth', 'verified'])->name('miPerfil');
 
 
