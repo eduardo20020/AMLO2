@@ -50,7 +50,8 @@ Route::get('/dashboardEmpresa/miPerfil', function () {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 Route::get('/dashboardPasante', function () {
-    return view('dashboardPasante');
+    $ofertas = oferta::all();
+    return view('dashboardPasante',['ofertas'=>$ofertas]);
 })->middleware(['auth', 'verified'])->name('dashboardPasante');
 
 Route::middleware('auth')->group(function () {

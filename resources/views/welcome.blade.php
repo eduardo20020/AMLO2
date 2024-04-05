@@ -20,12 +20,22 @@
           @if (Route::has('login'))
             <nav class="flex flex-1 justify-center gap-6">
               @auth
-                  <a
-                      href="{{ route('dashboardEmpresa') }}"
-                      class="rounded-md px-3 py-2 text-black"
-                  >
-                      Dashboard
-                  </a>
+
+              
+              <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Cerrar sesion') }}
+                    </x-responsive-nav-link>
+                </form>
+
+
+
+
+
               @else
                   <a
                       href="{{ route('login') }}"

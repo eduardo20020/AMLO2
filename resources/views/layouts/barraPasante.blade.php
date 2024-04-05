@@ -23,7 +23,11 @@
                     </x-nav-link>
                 </div>
 
-              
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('dashboardPasante')" :active="request()->routeIs('dashboard')">
+                        {{ __('Mi perfil') }}
+                    </x-nav-link>
+                </div>              
 
             </div>
 
