@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\crearOferta;
+use App\Http\Controllers\filtroController;
+use App\Http\Controllers\postularseController;
 use App\Http\Controllers\ProfileController;
 use App\Models\oferta;
 use App\Models\User;
@@ -50,7 +52,7 @@ Route::get('/dashboardEmpresa/miPerfil', function () {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 Route::get('/dashboardPasante', function () {
-    $ofertas = oferta::all();
+    $ofertas = oferta::inRandomOrder()->get();
     return view('dashboardPasante',['ofertas'=>$ofertas]);
 })->middleware(['auth', 'verified'])->name('dashboardPasante');
 
@@ -59,5 +61,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::post('/filtroPost', [filtroController::class, 'filtro'])->name('filtropost');
+
+Route::post('/postularse', [postularseController::class, 'postularse'])->name('postularse');
+
 
 require __DIR__.'/auth.php';

@@ -44,6 +44,7 @@ class crearOferta extends Controller
             $oferta->requisitos = $request->input('requisitos');
             $oferta->ubicacion = $request->input('ubicacion');
             $oferta->tiempo = $request->input('tiempo');
+            $oferta->estado = 'pendiente';
             $oferta->user_id = Auth::user()->id;
             
             // Guardar la oferta en la base de datos

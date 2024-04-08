@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('requisitos');
             $table->string('ubicacion');
             $table->string('tiempo');
+            $table->string('estado');
             $table->unsignedBigInteger('user_id'); // Definición de la clave foránea
             $table->foreign('user_id')->references('id')->on('users'); // Establecer la relació
             $table->timestamps();
