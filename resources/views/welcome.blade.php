@@ -7,7 +7,7 @@
 
     <div class="w-1/2 mx-2">
       <div class="items-center justify-center">
-        <img src="{{ asset('img/carnaval.png') }}" class=" sm:w-64 md:w-96 lg:w-128 xl:w-160 2xl:w-192"/>
+        <img src="{{ asset('img/logogo.jpg') }}" class=" sm:w-64 md:w-96 lg:w-128 xl:w-160 2xl:w-192 rounded-3xl shadow-lg"/>
       </div>
     </div>
 
