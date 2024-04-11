@@ -1,4 +1,6 @@
 @extends('layouts.base')
+
+
 @section('main')
 <div class="container mx-auto my-8 flex justify-center items-center">
   <!-- Contenido centrado vertical y horizontalmente -->
