@@ -1,9 +1,13 @@
 @extends('layouts.base')
 
 @section('main')
-<div class="bg-gray-100 h-screen flex justify-center items-center">
+<div class="bg-gray-100 h-screen flex  justify-center items-center">
+
     <div class="bg-white p-8 rounded shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Formulario</h2>
+        <h2 class="text-2xl font-bold mb-4">Te has postulado con exito!</h2>
+        <p>Porfavor responde esta encuesta opcionalmente</p>
+        <p>Para regresar, <a href="{{ route('dashboardPasante') }}" class="text-blue-400">Has click asi</a></p>
+
         <form action="#" method="POST">
             @csrf
             <div class="mb-4">

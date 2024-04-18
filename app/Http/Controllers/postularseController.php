@@ -21,7 +21,7 @@ class postularseController extends Controller
        $postulacion->save();
 
 
-        return redirect()->route('dashboardPasante')->with('success', 'Oferta creada exitosamente');
+        return redirect()->route('entrevista')->with('success', 'Oferta creada exitosamente');
 
         return back()->with('succes');
     }
