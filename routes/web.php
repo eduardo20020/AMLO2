@@ -13,6 +13,16 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+
+
+///////////////////encuesta////////////////////////////
+Route::get('/entrevista', function () {
+
+    return view('entrevista');
+})->name('entrevista');
+
+
+
 //////links de la barra de navegacion xd
 Route::view('/nosotros','nosotros')->name('nosotros');
 Route::view('/historia','historia')->name('historia');
